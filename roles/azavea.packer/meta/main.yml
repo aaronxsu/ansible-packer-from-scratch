@@ -1,0 +1,18 @@
+galaxy_info:
+  author: Aaron Su
+  description: An ansible role for installing packer
+  company: Azavea
+  license: Apache
+
+  min_ansible_version: 1.2
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+    categories:
+    - cloud
+    - system
+# Role dependencies are references to other Ansible roles
+# needed for a role to function properly.
+dependencies:
+  - { role: azavea.unzip }

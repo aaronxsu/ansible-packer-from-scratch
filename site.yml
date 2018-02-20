@@ -1,0 +1,6 @@
+---
+  # This instructs Ansible to apply the azavea.packer role to all hosts using sudo.
+- hosts: all
+  roles:
+    - role: "azavea.packer"
+  sudo: true

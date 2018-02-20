@@ -1,0 +1,15 @@
+---
+# tasks file for azavea.packer
+# this file houese a set of Ansible plays to install, configure, and run software.
+# For Packer, we need to download a specific version,
+# and since it’s packaged as a compiled binary in a ZIP archive, extract it.
+# Accomplishing that with Ansible’s built-in get_url and unarchive modules looks like this:
+- name: Download Packer
+  get_url:
+    url: https://releases.hashicorp.com/packer/1.2.0/packer_1.2.0_linux_amd64.zip
+    dest: /usr/local/src/packer_1.2.0_linux_amd64.zip
+- name: Extract and install Packer
+  unarchive:
+    src: /usr/local/src/packer_1.2.0_linux_amd64.zip
+    dest: /usr/local/bin
+    copy: no

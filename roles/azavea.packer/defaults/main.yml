@@ -1,0 +1,6 @@
+---
+# defaults file for azavea.packer
+# these are the defualt variables used by a role.
+# for the Packer role, there is only `packer_version`
+# Variables in this file have the lowest priorities fo any variables available
+# so putting the packer version here is desirable since it is easier to install another version of packer.
